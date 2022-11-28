@@ -1,18 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#FBFEC4"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/layout_customers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:orientation="vertical"
+        >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_name_customers_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F9C483"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="@string/tv_name_customers_list"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/customers_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FCE2A4"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_customers_books"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_name_cb_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F9C483"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="@string/tv_name_cb_list"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/customers_books_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FCE2A4"/>
+    </LinearLayout>
+
+
+    <GridLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+
+        android:layout_weight="1"
+        android:columnCount="2">
+
+        <Button
+            android:id="@+id/button_create"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:text="@string/create" />
+
+        <Button
+            android:id="@+id/button_join"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:text="@string/join" />
+
+        <Button
+            android:id="@+id/button_setup_customers"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:text="@string/view_customers" />
+
+        <Button
+            android:id="@+id/button_migrate"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:text="@string/migrate" />
+
+        <Button
+            android:id="@+id/button_delete_all"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:text="@string/delete_all" />
+
+        <Button
+            android:id="@+id/button_add_trigger"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:text="@string/add_trigger" />
+
+        <Button
+            android:id="@+id/button_add_new_customer"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center"
+            android:text="@string/add_new_customer" />
+    </GridLayout>
+
+</LinearLayout>

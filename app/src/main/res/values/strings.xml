@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">CHI_10_Room</string>
+    <string name="create">create</string>
+    <string name="update">update</string>
+    <string name="delete_all">delete all</string>
+    <string name="view_customers">view customers</string>
+    <string name="tv_name_customers_list">Customers list</string>
+    <string name="tv_name_cb_list">Customer\'s books list</string>
+    <string name="join">join</string>
+    <string name="migrate">migrate</string>
+    <string name="add_trigger">add trigger</string>
+    <string name="add_new_customer">add new customer</string>
 </resources>
