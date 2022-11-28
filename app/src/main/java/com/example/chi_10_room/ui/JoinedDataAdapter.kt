@@ -9,15 +9,6 @@ import com.example.chi_10_room.databinding.CustomersBooksItemBinding
 class JoinedDataAdapter : RecyclerView.Adapter<JoinedDataAdapter.JoinedDataHolder>() {
     private lateinit var customersBooks: List<CustomersAndBooks>
 
-    fun updateList(list: List<CustomersAndBooks>) {
-        customersBooks = list
-        notifyDataSetChanged()
-    }
-
-    fun updateItem(position: Int){
-        notifyItemChanged(position)
-    }
-
     fun setupJoinedDataList(list :List<CustomersAndBooks>){
         this.customersBooks = list
     }
